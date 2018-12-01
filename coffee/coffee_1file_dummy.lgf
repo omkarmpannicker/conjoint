@@ -1,0 +1,162 @@
+data='COFFEE.DAT';
+
+model:'1-class'  choice 1 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=94114  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+chdes = 1;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'2-class'  choice 2 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1576527  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'3-class'  choice 3 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=153121  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'4-class'  choice 4 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1619515  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'5-class'  choice 5 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1604686  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'6-class'  choice 6 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1534798  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'1-CFactor random coefficients model'  choice 1 /
+  cfn=1  cfnde=10  cfcsp=0
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=898796  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+chdes = 1;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+cfactorch 1 <- brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;
+model:'2-CFactor random coefficients model'  choice 1 /
+  cfn=2  cfnde=10  cfcsp=0
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=2027678  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+chdes = 1;
+dependent ch;
+replicate id;
+chidv set;
+chvar brand1 brand2 cap1 cap2 price1 price2 filter therm;
+chnum brand1 brand2 cap1 cap2 price1 price2 filter therm;
+cfactorch 1 <- brand1 brand2 cap1 cap2 price1 price2 filter therm;
+cfactorch 2 <- brand1 brand2 cap1 cap2 price1 price2 filter therm;
+attr ch ordinal ;
+
+end;

@@ -1,0 +1,209 @@
+spss='coffee_responses.sav';
+
+model:'1-class'  choice 1 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=417738  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+chdes = "F:\smabs\coffee_alternatives.sav";
+  attrid altid;
+chset = "F:\smabs\coffee_sets.sav";
+  csetid setid;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'2-class'  choice 2 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=833929  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'3-class'  choice 3 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1621799  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'4-class'  choice 4 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1669559  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'5-class'  choice 5 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1125075  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'6-class'  choice 6 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=2258575  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'5-class restricted'  choice 5 /
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=2079543  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+restrictch brand 0 0 0 4 5;
+restrictch capacity 1 2 3 0 5;
+restrictch price 1 0 3 0 0;
+restrictch filter 1 2 3 4 0;
+restrictch thermos 1 2 0 0 0;
+attr choice ordinal ;
+
+end;
+model:'1-CFactor random coefficients'  choice 1 /
+  cfn=1  cfnde=10  cfcsp=0
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1688524  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+cfactorch 1 <- brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'2-CFactor random coefficients'  choice 1 /
+  cfn=2  cfnde=10  cfcsp=0
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=1814998  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+cfactorch 1 <- brand capacity price filter thermos;
+cfactorch 2 <- brand capacity price filter thermos;
+attr choice ordinal ;
+
+end;
+model:'restricted 2-CFactor random coefficients'  choice 1 /
+  cfn=2  cfnde=10  cfcsp=0
+  toler=1e-008  tolem=0.01  tolran=1e-005  bayes=1  bayess2=1  bayeslat=1
+  bayespoi=1
+  iterem=250  iternr=50  itersv=50
+  iterboot=500
+  nseed=37093  nseedboot=0
+  nrand=0
+  usemiss=No
+  sewald=yes
+ outsect=0x1c17
+;
+dependent choice;
+replicate caseid;
+chidv setid;
+chvar brand capacity price filter thermos;
+chnom brand capacity price filter thermos;
+cfactorch 1 <- brand capacity thermos;
+cfactorch 2 <- brand capacity price;
+attr choice ordinal ;
+
+end;
